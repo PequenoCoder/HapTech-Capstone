@@ -15,14 +15,40 @@
             padding: 0;
         }
 
+        /* Banner with Logo & Navigation */
         .banner {
-            background-color: #2a2a2a; /* Slightly lighter grey for contrast */
+            background-color: #2a2a2a;
             padding: 10px;
+            display: flex;              /* Let’s use flex to align items */
+            align-items: center;
+            justify-content: space-between;
         }
 
         .logo {
             max-width: 400px;
             height: auto;
+        }
+
+        /* Navigation menu */
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         h1 {
@@ -122,6 +148,15 @@
     <!-- Banner with Logo -->
     <div class="banner">
         <img src="images/HAPTECHWhite.png" alt="HapTech Logo" class="logo">
+        <!-- Navigation "tab" menu on the right -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project_team.html">Meet the Team</a></li>
+                <li><a href="documents.html">Documents</a></li>
+                <li><a href="project_details.html">Project</a></li>
+            </ul>
+        </nav>
     </div>
 
     <h1>Meet The Team</h1>
@@ -139,7 +174,7 @@
                 <div class="info-section">
                     <span>Major:</span> <h4>Computer Science</h4>
                     <span>Hometown:</span> <h4>Bend, Oregon</h4>
-                    <span>Work Experience:</span> <h4>In the works</h4>
+                    <span>Work Experience:</span> <h4>Developer at Biomotum Inc, creating exoskeleton solutions. Designed C++ and Python systems for hardware integration and data collection</h4>
                     <span>Skills:</span> <h4>C++, Python</h4>
                     <span>Other Interests:</span> <h4>Mountain Biking, Mountaineering, Hiking, Backpacking</h4>
                 </div>
