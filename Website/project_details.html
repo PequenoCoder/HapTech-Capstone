@@ -49,65 +49,41 @@
             height: auto;
             background-color: rgb(255, 255, 255);
             margin: 20px auto;
-            font-size: 20px;
-            font-weight: bold;
             border-radius: 10px;
             color: #333;
             padding: 20px;
+            text-align: left;
         }
 
-        /* Team Member Row */
-        .team-member {
+        .technology-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .technology {
+            width: 300px;
+            height: auto;
+            background-color: rgba(160, 160, 160, 0.2);
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            color: #333;
+            text-align: left;
+        }
+
+        .technology-title {
             display: flex;
             align-items: center;
-            width: 90%;
-            background-color: #f4f4f4;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 5px;
         }
 
-        /* Team Member Image */
-        .team-member img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 20px;
-        }
-
-        /* Bio Text */
-        .bio {
-            text-align: left;
-            color: #333;
-            flex: 1;
-        }
-
-        /* Name Styling */
-        .bio h2 {
-            margin: 0;
-            font-size: 22px;
-            color: #222;
-        }
-
-        /* Role Styling */
-        .bio h3 {
-            margin: 5px 0;
-            font-size: 16px;
-            color: #555;
-        }
-
-        /* Description Styling */
-        .bio p {
-            font-size: 14px;
-            color: #444;
+        .technology-image {
+            margin-right: 10px;
         }
 
     </style>
 </head>
 <body>
-
     <!-- Banner with Logo -->
     <div class="banner">
         <img src="images/HAPTECHWhite.png" alt="HapTech Logo" class="logo">
@@ -116,7 +92,52 @@
     <h1>Project details</h1>
 
     <div class="box">
-        
+        <h2>High Level Requirements</h2>
+        <ul>
+            <li>Write, update, and maintain robust backend code utilizing the robot's API to communicate with the haptic rendering engine</li>
+            <li>Provide a user-friendly interface for designing and running simulations</li>
+            <li>Provide a user-friendly interface for collecting and analyzing data from haptic interactions</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Solution Vision</h2>
+        <p>
+            As of now, simulations must be hard coded in the haptic rendering engine and collecting data from interactions is difficult. Our solution
+            is a software system that will streamline the process of designing and conducting experiments. The system will allow users to:
+        </p>
+        <ul>
+            <li>Easily design the simulations through a user interface, allowing for the creation and manipulation of various objects</li>
+            <li>Set various experiment parameters, such as the number of trials</li>
+            <li>Run experiments with the FR3 robot</li>
+            <li>Collect and analyze data from the interactions through a user interface</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Technologies</h2>
+        <div class="technology-container">
+            <div class="technology">
+                <div class="technology-title">
+                    <img class="technology-image" src="images/python.png" alt="Python Logo" width="50">
+                    <h2>Python</h2>
+                </div>
+                <p>Python is used for its flexibility and simplicity for designing native user interfaces.</p>
+            </div>
+            <div class="technology">
+                <div class="technology-title">
+                    <h2>CHAI3D</h2>
+                </div>
+                <p>C++ haptic rendering engine used to display 3D simulations and communicate haptic data to the robot.</p>
+            </div>
+            <div class="technology">
+                <div class="technology-title">
+                    <img class="technology-image" src="images/franka.png" alt="Python Logo" width="50">
+                    <h2>libfranka</h2>
+                </div>
+                <p>C++ API used to control the FR3 robot.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
