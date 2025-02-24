@@ -13,7 +13,6 @@
             text-align: center;
             margin: 0;
             padding: 0;
-            overflow: hidden;
         }
 
         /* "Under Construction" Image - Smaller and in Front */
@@ -59,6 +58,25 @@
             border-radius: 10px;
             color: #333;
             padding: 20px;
+        }
+
+        /* Project Section */
+        .project-description {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .robot-pic {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .project-details-link {
+            text-decoration: none;
+            color: white;
+            background-color: #333;
+            border-radius: 10px;
+            padding: 10px;
         }
 
         /* Team Member Row */
@@ -113,12 +131,32 @@
 </head>
 <body>
 
-    <!-- "Under Construction" Image -->
-    <img src="/images/UnderConstruction.png" alt="Under Construction" class="under-construction">
-
     <!-- Banner with Logo -->
     <div class="banner">
         <img src="images/HAPTECHWhite.png" alt="HapTech Logo" class="logo">
+    </div>
+
+    <h1>The Project</h1>
+
+    <div class="box">
+        <div class="project-description">
+            <div>
+                <p>
+                    Haptic rendering technology enables users to physically experience forces and sensations from virtual simulations, 
+                    greatly enhancing interaction between humans and robots. At Raz Lab, located at Northern Arizona University, researchers 
+                    are exploring the capabilities of the advanced Franka Research 3 (FR3) robot to develop immersive haptic experiences for 
+                    human-robot interaction studies. Project HapTech aims to streamline this process by providing software solutions
+                    that allow researchers to efficiently design and conduct experiments.
+                </p>
+                <a class="project-details-link" href="project_details.html">
+                    Learn More
+                </a>
+            </div>
+            <div class="robot-pic">
+                <img id="robot-pic" src="images/fr3.png" alt="Franka Research 3 Robot">
+                <p>Franka Research 3 Robot</p>
+            </div>
+        </div>
     </div>
 
     <h1>Our Team</h1>
