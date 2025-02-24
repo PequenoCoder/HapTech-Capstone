@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #1e1e1e; /* Space grey background */
+            color: white; /* White text */
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* "Under Construction" Image - Smaller and in Front */
+        .under-construction {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 800px; /* Adjusted to be smaller */
+            height: auto;
+            transform: translate(-50%, -50%) rotate(-20deg);
+            opacity: 0.2; /* Slightly more visible */
+            z-index: 10; /* Brings it in front of content */
+            pointer-events: none; /* Allows clicking on elements behind it */
+        }
+
+        .banner {
+            background-color: #2a2a2a; /* Slightly lighter grey for contrast */
+            padding: 10px;
+        }
+
+        .logo {
+            max-width: 400px;
+            height: auto;
+        }
+
+        h1 {
+            color: #ccc;
+            margin-top: 20px;
+        }
+
+        /* Box Container */
+        .box {
+            width: 1000px;
+            height: auto;
+            background-color: rgb(255, 255, 255);
+            margin: 20px auto;
+            border-radius: 10px;
+            color: #333;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .technology-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .technology {
+            width: 300px;
+            height: auto;
+            background-color: rgba(160, 160, 160, 0.2);
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            color: #333;
+            text-align: left;
+        }
+
+        .technology-title {
+            display: flex;
+            align-items: center;
+            margin: 5px;
+        }
+
+        .technology-image {
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Banner with Logo -->
+    <div class="banner">
+        <img src="images/HAPTECHWhite.png" alt="HapTech Logo" class="logo">
+    </div>
+
+    <h1>Project details</h1>
+
+    <div class="box">
+        <h2>High Level Requirements</h2>
+        <ul>
+            <li>Write, update, and maintain robust backend code utilizing the robot's API to communicate with the haptic rendering engine</li>
+            <li>Provide a user-friendly interface for designing and running simulations</li>
+            <li>Provide a user-friendly interface for collecting and analyzing data from haptic interactions</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Solution Vision</h2>
+        <p>
+            As of now, simulations must be hard coded in the haptic rendering engine and collecting data from interactions is difficult. Our solution
+            is a software system that will streamline the process of designing and conducting experiments. The system will allow users to:
+        </p>
+        <ul>
+            <li>Easily design the simulations through a user interface, allowing for the creation and manipulation of various objects</li>
+            <li>Set various experiment parameters, such as the number of trials</li>
+            <li>Run experiments with the FR3 robot</li>
+            <li>Collect and analyze data from the interactions through a user interface</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>Technologies</h2>
+        <div class="technology-container">
+            <div class="technology">
+                <div class="technology-title">
+                    <img class="technology-image" src="images/python.png" alt="Python Logo" width="50">
+                    <h2>Python</h2>
+                </div>
+                <p>Python is used for its flexibility and simplicity for designing native user interfaces.</p>
+            </div>
+            <div class="technology">
+                <div class="technology-title">
+                    <h2>CHAI3D</h2>
+                </div>
+                <p>C++ haptic rendering engine used to display 3D simulations and communicate haptic data to the robot.</p>
+            </div>
+            <div class="technology">
+                <div class="technology-title">
+                    <img class="technology-image" src="images/franka.png" alt="Python Logo" width="50">
+                    <h2>libfranka</h2>
+                </div>
+                <p>C++ API used to control the FR3 robot.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
