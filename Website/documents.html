@@ -1,91 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Documents</title>
-  <!-- Orbitron font -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Documents</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Orbitron', sans-serif;
-      background-color: #1e1e1e; /* Space grey background */
-      color: white; /* White text */
+      font-family: 'Tomorrow', sans-serif;
+      background-color: #1e1e1e;
+      color: white;
       text-align: center;
       margin: 0;
       padding: 0;
     }
 
-    /* Banner with Logo & Navigation */
     .banner {
       background-color: #2a2a2a;
-      padding: 10px;
-      display: flex; /* Let’s use flex to align items */
+      padding: 5px;
+      display: flex;
       align-items: center;
       justify-content: space-between;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     }
 
     .logo {
-      max-width: 400px;
+      max-width: 300px;
       height: auto;
     }
 
-    /* Navigation menu */
+    nav {
+      display: flex;
+    }
+
     nav ul {
       list-style: none;
       display: flex;
+      gap: 30px;
       margin: 0;
       padding: 0;
     }
     nav li {
-      margin-left: 20px;
+      display: inline;
     }
     nav a {
       color: white;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 24px;
+      padding: 10px 15px;
+      transition: 0.3s;
     }
     nav a:hover {
-      text-decoration: underline;
+      background-color: #444;
+      border-radius: 5px;
     }
 
-    /* Title styling */
     h1 {
       color: #ccc;
       margin-top: 20px;
     }
 
-    /* Box Container */
     .box {
-      width: 1000px;
-      background-color: #fff; /* White background for contrast */
-      margin: 20px auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      font-weight: bold;
-      border-radius: 10px;
-      color: #333; /* Dark text on white background */
-      padding: 20px;
+        width: 70vw;
+        height: auto;
+
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        color: #333;
+        padding: 20px;
     }
 
-    /* Documents container */
     .documents-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      padding: 20px 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+      padding: 20px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      justify-items: center;
     }
-
     .doc-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 150px;
-      text-decoration: none; /* For images if used as links */
+      background-color: #f4f4f4;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 100%;
+      text-decoration: none;
+      color: #444;
+      transition: 0.3s ease;
     }
 
     .doc-item img {
@@ -94,62 +107,62 @@
       margin-bottom: 10px;
     }
 
-    /* Document label styling */
-    .doc-item p {
-      color: #007BFF; /* Accent color text on white background */
-      font-size: 1.1em;
-      margin: 0;
+    .doc-item span {
+      font-weight: bold;
+      font-size: 16px;
     }
+
+    .doc-item:hover {
+      background-color: #ddd;
+      transform: scale(1.05); /* Subtle hover effect */
+    }
+
   </style>
 </head>
 <body>
-
-  <!-- Banner with Logo and Navigation -->
   <div class="banner">
-      <!-- Logo on the left -->
+    <a href="index.html">
       <img src="images/HAPTECHWhite.png" alt="HapTech Logo" class="logo" />
-
-      <!-- Navigation "tab" menu on the right -->
-      <nav>
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="project_team.html">Meet the Team</a></li>
-              <li><a href="documents.html">Documents</a></li>
-              <li><a href="project_details.html">Project</a></li>
-          </ul>
-      </nav>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project_team.html">Meet the Team</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="project_details.html">Project</a></li>
+      </ul>
+    </nav>
   </div>
 
-  <h1>Documents</h1>
+  <h1>Team Documents</h1>
 
   <div class="box">
     <div class="documents-container">
-      <div class="doc-item">
-        <img src="images/teamstandards.png" alt="Team Standards" />
-        <p>Team Standards</p>
-      </div>
-      <div class="doc-item">
-        <img src="images/teaminventory.png" alt="Team Inventory" />
-        <p>Team Inventory</p>
-      </div>
-      <div class="doc-item">
-        <img src="images/presentations.png" alt="Presentations" />
-        <p>Presentations</p>
-      </div>
-      <div class="doc-item">
-        <img src="images/techfeasibility.png" alt="Tech Feasibility" />
-        <p>Tech Feasibility</p>
-      </div>
-      <div class="doc-item">
-        <img src="images/designsicon.png" alt="Designs" />
-        <p>Designs</p>
-      </div>
-      <div class="doc-item">
-        <img src="images/requirement.png" alt="Requirements" />
-        <p>Requirements</p>
-      </div>
-    </div>
+      <a href="documents/team_standards.pdf" class="doc-item">
+          <img src="images/teamstandards.png" alt="Team Standards" />
+          <span>Team Standards</span>
+      </a>
+      <a href="documents/team_inventory.pdf" class="doc-item">
+          <img src="images/management.png" alt="Team Inventory" />
+          <span>Team Inventory</span>
+      </a>
+      <a href="documents/presentations.pdf" class="doc-item">
+          <img src="images/presentation.png" alt="Presentations" />
+          <span>Presentations</span>
+      </a>
+      <a href="documents/tech_feasibility.pdf" class="doc-item">
+          <img src="images/study.png" alt="Tech Feasibility" />
+          <span>Tech Feasibility</span>
+      </a>
+      <a href="documents/designs.pdf" class="doc-item">
+          <img src="images/sketch.png" alt="Designs" />
+          <span>Designs</span>
+      </a>
+      <a href="documents/requirements.pdf" class="doc-item">
+          <img src="images/requirement.png" alt="Requirements" />
+          <span>Requirements</span>
+      </a>
+    </div>  
   </div>
-
 </body>
 </html>

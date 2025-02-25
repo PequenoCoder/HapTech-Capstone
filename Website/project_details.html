@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Details</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Tomorrow', sans-serif;
             background-color: #1e1e1e; /* Space grey background */
             color: white; /* White text */
             text-align: center;
@@ -15,41 +15,44 @@
             padding: 0;
         }
 
-        /* Banner with Logo & Navigation */
         .banner {
-            background-color: #2a2a2a;
-            padding: 10px;
-            display: flex;              /* Let’s use flex to align items */
-            align-items: center;
-            justify-content: space-between;
+        background-color: #2a2a2a;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
         }
-
 
         .logo {
-            max-width: 400px;
-            height: auto;
+        max-width: 300px;
+        height: auto;
         }
 
-        /* Navigation menu */
+        nav {
+        display: flex;
+        }
+
         nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
         }
-
         nav li {
-            margin-left: 20px;
+        display: inline;
         }
-
         nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        padding: 10px 15px;
+        transition: 0.3s;
         }
-
         nav a:hover {
-            text-decoration: underline;
+        background-color: #444;
+        border-radius: 5px;
         }
 
         h1 {
@@ -59,7 +62,7 @@
 
         /* Box Container */
         .box {
-            width: 1000px;
+            width: 70vw;
             height: auto;
             background-color: rgb(255, 255, 255);
             margin: 20px auto;
@@ -98,28 +101,28 @@
     </style>
 </head>
 <body>
-    <!-- Banner with Logo -->
     <div class="banner">
-        <img src="images/HAPTECHWhite.png" alt="HapTech Logo" class="logo">
-        <!-- Navigation "tab" menu on the right -->
+        <a href="index.html">
+          <img src="images/HAPTECHWhite.png" alt="HapTech Logo" class="logo" />
+        </a>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="project_team.html">Meet the Team</a></li>
-                <li><a href="documents.html">Documents</a></li>
-                <li><a href="project_details.html">Project</a></li>
-            </ul>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project_team.html">Meet the Team</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="project_details.html">Project</a></li>
+          </ul>
         </nav>
-    </div>
+      </div>
 
     <h1>Project Details</h1>
 
     <div class="box">
         <h2>High Level Requirements</h2>
         <ul>
-            <li>Write, update, and maintain robust backend code utilizing the robot's API to communicate with the haptic rendering engine</li>
-            <li>Provide a user-friendly interface for designing and running simulations</li>
-            <li>Provide a user-friendly interface for collecting and analyzing data from haptic interactions</li>
+            <li>Write, update, and maintain robust backend code utilizing the robot's API to communicate with the haptic rendering engine.</li>
+            <li>Provide a user-friendly interface for designing and running simulations.</li>
+            <li>Provide a user-friendly interface for collecting and analyzing data from haptic interactions.</li>
         </ul>
     </div>
 
@@ -130,10 +133,10 @@
             is a software system that will streamline the process of designing and conducting experiments. The system will allow users to:
         </p>
         <ul>
-            <li>Easily design the simulations through a user interface, allowing for the creation and manipulation of various objects</li>
-            <li>Set various experiment parameters, such as the number of trials</li>
-            <li>Run experiments with the FR3 robot</li>
-            <li>Collect and analyze data from the interactions through a user interface</li>
+            <li>Easily design the simulations through a user interface, allowing for the creation and manipulation of various objects.</li>
+            <li>Set various experiment parameters, such as the number of trials.</li>
+            <li>Run experiments with the FR3 robot.</li>
+            <li>Collect and analyze data from the interactions through a user interface.</li>
         </ul>
     </div>
 

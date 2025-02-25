@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Web Page</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
   <style>
       body {
-          font-family: 'Orbitron', sans-serif;
+          font-family: 'Tomorrow', sans-serif;
           background-color: #1e1e1e; /* Space grey background */
           color: white; /* White text */
           text-align: center;
@@ -15,180 +15,215 @@
           padding: 0;
       }
 
-      /* Banner with Logo & Navigation */
-      .banner {
-          background-color: #2a2a2a;
-          padding: 10px;
-          display: flex;              /* Let’s use flex to align items */
-          align-items: center;
-          justify-content: space-between;
-      }
+    .banner {
+      background-color: #2a2a2a;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    }
 
-      .logo {
-          max-width: 400px;
-          height: auto;
-      }
+    .logo {
+      max-width: 300px;
+      height: auto;
+    }
 
-      /* Navigation menu */
-      nav ul {
-          list-style: none;
-          display: flex;
-          margin: 0;
-          padding: 0;
-      }
+    nav {
+      display: flex;
+    }
 
-      nav li {
-          margin-left: 20px;
-      }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      display: inline;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      padding: 10px 15px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background-color: #444;
+      border-radius: 5px;
+    }
 
-      nav a {
-          color: white;
-          text-decoration: none;
-          font-size: 18px;
-      }
+    h1 {
+        color: #ccc;
+        margin-top: 20px;
+    }
 
-      nav a:hover {
-          text-decoration: underline;
-      }
+    /* Box Container */
+    .box {
+        width: 70vw;
+        height: auto;
+        background-color: rgb(255, 255, 255);
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        color: #333;
+        padding: 20px;
+    }
 
-      h1 {
-          color: #ccc;
-          margin-top: 20px;
-      }
+    /* Project Section */
+    .project-description {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        max-width: 80%;
+        margin: 0 auto;
+        gap: 20px;
+    }
 
-      /* Box Container */
-      .box {
-          width: 1000px;
-          height: auto;
-          background-color: rgb(255, 255, 255);
-          margin: 20px auto;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          font-size: 20px;
-          font-weight: bold;
-          border-radius: 10px;
-          color: #333;
-          padding: 20px;
-      }
+    /* Text Styling */
+    .project-text {
+        max-width: 60%;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #444;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+    }
 
-      /* Project Section */
-      .project-description {
-          display: flex;
-          justify-content: space-between;
-      }
+    /* Robot Image Styling */
+    .robot-pic img {
+        width: 250px;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+    }
 
-      .robot-pic {
-          margin: 10px;
-          padding: 10px;
-      }
+    /* Learn More Button */
+    .project-details-link {
+        display: inline-block;
+        background-color: #444;
+        color: white;
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
+        margin-top: 15px;
+    }
 
-      .project-details-link {
-          text-decoration: none;
-          color: white;
-          background-color: #333;
-          border-radius: 10px;
-          padding: 10px;
-      }
+    .project-details-link:hover {
+        background-color: #666;
+    }
 
-      .project-team-link {
-          text-decoration: none;
-          color: white;
-          background-color: #333;
-          border-radius: 10px;
-          padding: 10px;
-      }
 
-      /* Team Member Row */
-      .team-member {
-          display: flex;
-          align-items: center;
-          width: 90%;
-          background-color: #f4f4f4;
-          margin: 10px 0;
-          padding: 15px;
-          border-radius: 10px;
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-      }
+    .project-team-link {
+        text-decoration: none;
+        color: white;
+        background-color: #333;
+        border-radius: 10px;
+        padding: 10px;
+    }
 
-      /* Team Member Image */
-      .team-member img {
-          width: 120px;
-          height: 120px;
-          border-radius: 50%;
-          object-fit: cover;
-          margin-right: 20px;
-      }
+    /* Team Member Row */
+    .team-member {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        background-color: #f4f4f4;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-      /* Bio Text */
-      .bio {
-          text-align: left;
-          color: #333;
-          flex: 1;
-      }
+    /* Team Member Image */
+    .team-member img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+    }
 
-      /* Name Styling */
-      .bio h2 {
-          margin: 0;
-          font-size: 22px;
-          color: #222;
-      }
+    /* Bio Text */
+    .bio {
+        text-align: left;
+        color: #333;
+        flex: 1;
+    }
 
-      /* Role Styling */
-      .bio h3 {
-          margin: 5px 0;
-          font-size: 16px;
-          color: #555;
-      }
+    /* Name Styling */
+    .bio h2 {
+        margin: 0;
+        font-size: 22px;
+        color: #222;
+    }
 
-      /* Description Styling */
-      .bio p {
-          font-size: 14px;
-          color: #444;
-      }
+    /* Role Styling */
+    .bio h3 {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #555;
+    }
+
+    /* Description Styling */
+    .bio p {
+        font-size: 14px;
+        color: #444;
+    }
   </style>
 </head>
 <body>
 
   <!-- Banner with Logo and Navigation -->
   <div class="banner">
-      <!-- Logo on the left -->
-      <img src="images/HAPTECHWhite.png" alt="HapTech Logo" class="logo">
-
-      <!-- Navigation "tab" menu on the right -->
-      <nav>
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="project_team.html">Meet the Team</a></li>
-              <li><a href="documents.html">Documents</a></li>
-              <li><a href="project_details.html">Project</a></li>
-          </ul>
-      </nav>
+    <a href="index.html">
+      <img src="images/HAPTECHWhite.png" alt="HapTech Logo" class="logo" />
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project_team.html">Meet the Team</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="project_details.html">Project</a></li>
+      </ul>
+    </nav>
   </div>
 
   <h1>The Project</h1>
-
+  
   <div class="box">
-      <div class="project-description">
-          <div>
-              <p>
-                  Haptic rendering technology enables users to physically experience forces and sensations from virtual simulations, 
-                  greatly enhancing interaction between humans and robots. At Raz Lab, located at Northern Arizona University, researchers 
-                  are exploring the capabilities of the advanced Franka Research 3 (FR3) robot to develop immersive haptic experiences for 
-                  human-robot interaction studies. Project HapTech aims to streamline this process by providing software solutions
-                  that allow researchers to efficiently design and conduct experiments.
-              </p>
-              <a class="project-details-link" href="project_details.html">
-                  Learn More
-              </a>
-          </div>
-          <div class="robot-pic">
-              <img id="robot-pic" src="images/fr3.png" alt="Franka Research 3 Robot">
-              <p>Franka Research 3 Robot</p>
-          </div>
-      </div>
-  </div>
+    <div class="project-description">
+        <div class="project-text">
+            <p>
+                Haptic rendering technology enables users to physically experience forces and sensations from virtual simulations, 
+                greatly enhancing interaction between humans and robots. At Raz Lab, located at Northern Arizona University, researchers 
+                are exploring the capabilities of the advanced Franka Research 3 (FR3) robot to develop immersive haptic experiences for 
+                human-robot interaction studies. Project HapTech aims to streamline this process by providing software solutions
+                that allow researchers to efficiently design and conduct experiments.
+            </p>
+            <a class="project-details-link" href="project_details.html">
+                Learn More
+            </a>
+        </div>
+        <div class="robot-pic">
+            <img src="images/fr3.png" alt="Franka Research 3 Robot">
+            <p style="text-align: center; font-size: 16px; color: #444;">Franka Research 3 Robot</p>
+        </div>
+    </div>
+</div>
+
 
   <h1>Our Team</h1>
 
