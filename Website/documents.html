@@ -17,14 +17,15 @@
 
     .banner {
       background-color: #2a2a2a;
-      padding: 20px;
+      padding: 5px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     }
 
     .logo {
-      max-width: 200px;
+      max-width: 300px;
       height: auto;
     }
 
@@ -35,7 +36,7 @@
     nav ul {
       list-style: none;
       display: flex;
-      gap: 20px;
+      gap: 30px;
       margin: 0;
       padding: 0;
     }
@@ -45,7 +46,7 @@
     nav a {
       color: white;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 24px;
       padding: 10px 15px;
       transition: 0.3s;
     }
@@ -60,28 +61,44 @@
     }
 
     .box {
-      width: 80%;
-      background-color: #fff;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 10px;
-      color: #333;
+        width: 70vw;
+        height: auto;
+
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        color: #333;
+        padding: 20px;
     }
 
     .documents-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      justify-content: center;
+      gap: 50px;
       padding: 20px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      justify-items: center;
     }
-
     .doc-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       background-color: #f4f4f4;
       padding: 15px;
       border-radius: 8px;
       box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
       text-align: center;
+      width: 100%;
+      text-decoration: none;
+      color: #444;
+      transition: 0.3s ease;
     }
 
     .doc-item img {
@@ -90,15 +107,16 @@
       margin-bottom: 10px;
     }
 
-    .doc-item a {
-      text-decoration: none;
-      color: #007BFF;
+    .doc-item span {
       font-weight: bold;
       font-size: 16px;
     }
-    .doc-item a:hover {
-      text-decoration: underline;
+
+    .doc-item:hover {
+      background-color: #ddd;
+      transform: scale(1.05); /* Subtle hover effect */
     }
+
   </style>
 </head>
 <body>
@@ -120,31 +138,31 @@
 
   <div class="box">
     <div class="documents-container">
-      <div class="doc-item">
-        <img src="images/teamstandards.png" alt="Team Standards" />
-        <a href="documents/team_standards.pdf">Team Standards</a>
-      </div>
-      <div class="doc-item">
-        <img src="images/management.png" alt="Team Inventory" />
-        <a href="documents/team_inventory.pdf">Team Inventory</a>
-      </div>
-      <div class="doc-item">
-        <img src="images/presentation.png" alt="Presentations" />
-        <a href="documents/presentations.pdf">Presentations</a>
-      </div>
-      <div class="doc-item">
-        <img src="images/study.png" alt="Tech Feasibility" />
-        <a href="documents/tech_feasibility.pdf">Tech Feasibility</a>
-      </div>
-      <div class="doc-item">
-        <img src="images/sketch.png" alt="Designs" />
-        <a href="documents/designs.pdf">Designs</a>
-      </div>
-      <div class="doc-item">
-        <img src="images/requirement.png" alt="Requirements" />
-        <a href="documents/requirements.pdf">Requirements</a>
-      </div>
-    </div>
+      <a href="documents/team_standards.pdf" class="doc-item">
+          <img src="images/teamstandards.png" alt="Team Standards" />
+          <span>Team Standards</span>
+      </a>
+      <a href="documents/team_inventory.pdf" class="doc-item">
+          <img src="images/management.png" alt="Team Inventory" />
+          <span>Team Inventory</span>
+      </a>
+      <a href="documents/presentations.pdf" class="doc-item">
+          <img src="images/presentation.png" alt="Presentations" />
+          <span>Presentations</span>
+      </a>
+      <a href="documents/tech_feasibility.pdf" class="doc-item">
+          <img src="images/study.png" alt="Tech Feasibility" />
+          <span>Tech Feasibility</span>
+      </a>
+      <a href="documents/designs.pdf" class="doc-item">
+          <img src="images/sketch.png" alt="Designs" />
+          <span>Designs</span>
+      </a>
+      <a href="documents/requirements.pdf" class="doc-item">
+          <img src="images/requirement.png" alt="Requirements" />
+          <span>Requirements</span>
+      </a>
+    </div>  
   </div>
 </body>
 </html>
