@@ -6,59 +6,27 @@
     <title>Project Details</title>
     <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
     <style>
+    
         body {
-            font-family: 'Tomorrow', sans-serif;
-            background-color: #1e1e1e; 
-            color: white; 
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        .banner {
-        background-color: #2a2a2a;
-        padding: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .logo {
-        max-width: 300px;
-        height: auto;
-        }
-
-        nav {
-        display: flex;
-        }
-
-        nav ul {
-        list-style: none;
-        display: flex;
-        gap: 30px;
+        height: 100%;
+        font-family: 'Tomorrow', sans-serif;
+        background: linear-gradient(to bottom, #1e1e1e, #2a2a2a);
+        color: white;
+        text-align: center;
         margin: 0;
         padding: 0;
         }
-        nav li {
-        display: inline;
-        }
-        nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 24px;
-        padding: 10px 15px;
-        transition: 0.3s;
-        }
-        nav a:hover {
-        background-color: #444;
-        border-radius: 5px;
-        }
 
-        h1 {
-            color: #ccc;
-            margin-top: 20px;
-        }
+        h1 
+    {
+        font-size: 32px;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: inline-block;
+        padding-bottom: 5px;
+        margin-top: 50px;
+    }
 
         /* Box Container */
         .box {
@@ -97,23 +65,26 @@
         .technology-image {
             margin-right: 10px;
         }
+        .pdf-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0;
+        }
+
+        .pdf-container iframe {
+        width: 80%; /* Adjust width as needed */
+        height: 600px; /* Set a proper height */
+        border: 2px solid #333; /* Optional border */
+        border-radius: 10px; /* Rounded corners */
+        }
+
 
     </style>
 </head>
 <body>
-    <div class="banner">
-        <a href="index.html">
-          <img src="images/HAPTECHWhite.png" alt="HapTech Logo" class="logo" />
-        </a>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="project_team.html">Meet the Team</a></li>
-            <li><a href="documents.html">Documents</a></li>
-            <li><a href="project_details.html">Project</a></li>
-          </ul>
-        </nav>
-      </div>
+    <div id="navbar-container"></div>
 
     <h1>Project Details</h1>
 
@@ -165,5 +136,22 @@
             </div>
         </div>
     </div>
+
+    <div class="box">
+        <h2>Project Initial Description</h2>
+        <div class="pdf-container">
+            <iframe src="documents/2025-01 Franka haptic rendering.pdf" title="Project Initial Description PDF"></iframe>
+        </div>
+    </div>  
+
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading the navbar:', error));
+    </script>
 </body>
 </html>
