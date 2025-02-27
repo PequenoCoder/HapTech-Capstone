@@ -43,13 +43,14 @@
 
         .technology-container 
         {
+            width: 100%;
             display: flex;
             justify-content: space-around;
         }
 
         .technology 
         {
-            width: 300px;
+            width: 30%;
             height: auto;
             background-color: rgba(160, 160, 160, 0.2);
             margin: 20px;
@@ -88,10 +89,42 @@
             border-radius: 10px; 
         }
 
+        @media (max-width: 900px) 
+        {
+            .technology-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .technology {
+                width: 80%; 
+                max-width: 400px;
+            }
+        }   
+
+        @media (max-width: 600px) 
+        {
+            .technology {
+                width: 90%;
+            }
+
+            .technology-title {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
     </style>
 
 </head>
 <body>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector(".nav-links");
+            navLinks.style.display = (navLinks.style.display === "flex") ? "none" : "flex";
+        }
+    </script>
+
     <div id="navbar-container"></div>
 
     <h1>Project Details</h1>

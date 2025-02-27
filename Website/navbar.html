@@ -3,62 +3,105 @@
 
     <div class="banner">
         <a href="index.html">
-        <img src="images/HAPTECHWhite.png" alt="HapTech Logo" class="logo" />
+            <img src="images/HAPTECHWhite.png" alt="HapTech Logo" class="logo">
         </a>
+    
         <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="project_details.html">Project</a></li>
-            <li><a href="project_team.html">Meet the Team</a></li>
-            <li><a href="documents.html">Documents</a></li>
-            
-        </ul>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project_details.html">Project</a></li>
+                <li><a href="project_team.html">Meet the Team</a></li>
+                <li><a href="documents.html">Documents</a></li>
+            </ul>
+    
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
         </nav>
+
     </div>
-    </head>
+    
+</head>
 
-    <style>
+<style>
+/* Navigation Bar */
+.banner {
+    background-color: #2a2a2a;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
 
-    .banner 
-    {
-        background-color: #2a2a2a;
-        padding: 10px 30px;
-        display: flex;
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Default Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+    background-color: #444;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+/* Mobile Menu Button */
+.menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 🔹 Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: row;
         align-items: center;
-        justify-content: space-between;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     }
-    
-    .logo 
-    {
-        max-width: 250px;
-        height: auto;
+
+    .nav-links {
+        display: none; /* Hide nav links initially on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #2a2a2a;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
     }
-    
-    nav ul 
-    {
-        list-style: none;
-        display: flex;
-        gap: 40px;
-        margin: 0;
-        padding: 0;
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
     }
-    
-    nav a 
-    {
-        color: white;
-        text-decoration: none;
-        font-size: 20px;
-        padding: 10px 20px;
-        font-weight: 600; 
-        transition: background 0.3s, transform 0.2s;
+
+    .menu-icon {
+        display: block; /* Show menu icon on small screens */
     }
-    
-    nav a:hover 
-    {
-        background-color: #444;
-        border-radius: 5px;
-        transform: scale(2);
-    }
-    
-    </style>
+}
+
+</style>

@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
+    <title>Home Page</title>
     <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styling/style.css">  <!-- Link to the external CSS file -->
 </head>
@@ -195,10 +195,33 @@
     margin-bottom: 50px;
     }
 
+    @media (max-width: 768px) {
+    .project-description {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center align text */
+        
+    }
+
+    .robot-pic {
+        width: 100%; /* Make the image take full width */
+    }
+
+    .project-text {
+        max-width: 100%; /* Make the text take full width */
+        font-size: smaller;
+    }
+    }
+
   </style>
 
 </head>
 <body>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector(".nav-links");
+            navLinks.style.display = (navLinks.style.display === "flex") ? "none" : "flex";
+        }
+    </script>
 
     <div id="navbar-container"></div>
 
