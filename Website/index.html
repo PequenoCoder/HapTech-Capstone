@@ -1,67 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HapTech</title>
-  <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styling/style.css">  <!-- Link to the external CSS file -->
+</head>
   <style>
-      body {
-          font-family: 'Tomorrow', sans-serif;
-          background-color: #1e1e1e; /* Space grey background */
-          color: white; /* White text */
-          text-align: center;
-          margin: 0;
-          padding: 0;
-      }
 
-    .banner {
-      background-color: #2a2a2a;
-      padding: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .logo {
-      max-width: 300px;
-      height: auto;
-    }
-
-    nav {
-      display: flex;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
+    body 
+    {
+      font-family: 'Tomorrow', sans-serif;
+      background: linear-gradient(to bottom, #1e1e1e, #2a2a2a);
+      color: white;
+      text-align: center;
       margin: 0;
       padding: 0;
     }
-    nav li {
-      display: inline;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 24px;
-      padding: 10px 15px;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      background-color: #444;
-      border-radius: 5px;
+
+    h1 
+    {
+        font-size: 32px;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        display: inline-block;
+        padding-bottom: 5px;
+        margin-top: 50px;
     }
 
-    h1 {
-        color: #ccc;
-        margin-top: 20px;
+    .section-divider 
+    {
+        width: 80%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.2); 
+        margin-top: 50px;
+        border: none;
     }
 
-    /* Box Container */
-    .box {
+    .box 
+    {
         width: 70vw;
         height: auto;
         background-color: rgb(255, 255, 255);
@@ -77,8 +54,23 @@
         padding: 20px;
     }
 
-    /* Project Section */
-    .project-description {
+    .box-empty 
+    {
+        width: 70vw;
+        height: auto;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 10px;
+        color: #333;
+    }
+
+    .project-description 
+    {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -88,58 +80,59 @@
         gap: 20px;
     }
 
-    /* Text Styling */
-    .project-text {
+    .project-text 
+    {
         max-width: 60%;
         font-size: 18px;
         line-height: 1.6;
         color: #444;
         padding: 20px;
-        background: rgba(255, 255, 255, 0.1);
         border-radius: 10px;
         box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
     }
 
-    /* Robot Image Styling */
-    .robot-pic img {
-        width: 250px;
+    .robot-pic img 
+    {
+        width: 100%;
         height: auto;
         border-radius: 10px;
-        box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    /* Learn More Button */
-    .project-details-link {
+    .robot-text 
+    {
+        font-size: 12px;
+        color: #444;
+        font-style: italic;
+        text-align: center;
+    }
+
+    .project-details-link, .project-team-link 
+    {
         display: inline-block;
-        background-color: #444;
+        background: #444;
         color: white;
-        padding: 12px 20px;
+        padding: 12px 24px;
         font-size: 18px;
         font-weight: bold;
         text-decoration: none;
         border-radius: 5px;
-        transition: background 0.3s ease-in-out;
-        margin-top: 15px;
+        transition: all 0.3s ease;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     }
 
-    .project-details-link:hover {
-        background-color: #666;
+    .project-details-link:hover, .project-team-link:hover 
+    {
+        background: #666;
+        transform: scale(1.05);
+        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
     }
 
-
-    .project-team-link {
-        text-decoration: none;
-        color: white;
-        background-color: #333;
-        border-radius: 10px;
-        padding: 10px;
-    }
-
-    /* Team Member Row */
-    .team-member {
+    .team-member 
+    {
         display: flex;
         align-items: center;
-        width: 90%;
+        width: 100%;
         background-color: #f4f4f4;
         margin: 10px 0;
         padding: 15px;
@@ -147,8 +140,8 @@
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    /* Team Member Image */
-    .team-member img {
+    .team-member img 
+    {
         width: 120px;
         height: 120px;
         border-radius: 50%;
@@ -156,54 +149,63 @@
         margin-right: 20px;
     }
 
-    /* Bio Text */
-    .bio {
+    .bio 
+    {
         text-align: left;
         color: #333;
         flex: 1;
     }
 
-    /* Name Styling */
-    .bio h2 {
+    .bio a 
+    {
+        text-decoration: none; 
+        color: inherit; 
+        font-weight: normal; 
+    }
+
+    .bio a:hover 
+    {
+        text-decoration: none; 
+        color: inherit; 
+    }
+
+
+    .bio h2 
+    {
         margin: 0;
         font-size: 22px;
         color: #222;
     }
 
-    /* Role Styling */
-    .bio h3 {
+    .bio h3 
+    {
         margin: 5px 0;
         font-size: 16px;
         color: #555;
     }
 
-    /* Description Styling */
-    .bio p {
+    .bio p 
+    {
         font-size: 14px;
         color: #444;
     }
+
+    .section 
+    {
+    margin-bottom: 50px;
+    }
+
   </style>
+
 </head>
 <body>
 
-  <!-- Banner with Logo and Navigation -->
-  <div class="banner">
-    <a href="index.html">
-      <img src="images/HAPTECHWhite.png" alt="HapTech Logo" class="logo" />
-    </a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="project_team.html">Meet the Team</a></li>
-        <li><a href="documents.html">Documents</a></li>
-        <li><a href="project_details.html">Project</a></li>
-      </ul>
-    </nav>
-  </div>
+    <div id="navbar-container"></div>
 
   <h1>The Project</h1>
-  
-  <div class="box">
+
+
+    <div class="box">
     <div class="project-description">
         <div class="project-text">
             <p>
@@ -219,16 +221,17 @@
         </div>
         <div class="robot-pic">
             <img src="images/fr3.png" alt="Franka Research 3 Robot">
-            <p style="text-align: center; font-size: 16px; color: #444;">Franka Research 3 Robot</p>
+            <p class="robot-text "">Franka Research 3 Robot</p>
         </div>
     </div>
-</div>
+    </div>
+    <hr class="section-divider">
 
 
   <h1>Our Team</h1>
 
   <!-- Team Section -->
-  <div class="box">
+  <div class="box-empty">
 
       <!-- Team Member 1 -->
       <div class="team-member">
@@ -271,10 +274,11 @@
       </a>
 
   </div>
+  <hr class="section-divider">
 
   <h1>Our Sponsor</h1>
 
-  <div class="box">
+  <div class="box-empty">
       <!-- Sponsor -->
       <div class="team-member">
           <img src="images/RezaPic.jpg" alt="Dr. Reza Razavian">
@@ -285,6 +289,17 @@
           </div>
       </div>
   </div>
+
+
+
+    <script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading the navbar:', error));
+    </script>
 
 </body>
 </html>
