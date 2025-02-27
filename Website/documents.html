@@ -99,7 +99,7 @@
 
     @media (max-width: 900px) {
     .documents-container {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* More flexible for tablets */
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     }
 
     .doc-item {
@@ -109,7 +109,7 @@
 
     @media (max-width: 600px) {
         .documents-container {
-            grid-template-columns: repeat(2, 1fr); /* Show 2 items per row on small screens */
+            grid-template-columns: repeat(2, 1fr);
             gap: 35px;
         }
 
@@ -118,18 +118,18 @@
         }
 
         .doc-item img {
-            width: 80px; /* Slightly smaller icons for compact screens */
+            width: 80px;
         }
     }
 
     @media (max-width: 400px) {
         .documents-container {
-            grid-template-columns: repeat(1, 1fr); /* Stack items in a single column */
+            grid-template-columns: repeat(1, 1fr);
             gap: 15px;
         }
 
         .doc-item img {
-            width: 70px; /* Smallest icon size */
+            width: 70px;
         }
     }
 
